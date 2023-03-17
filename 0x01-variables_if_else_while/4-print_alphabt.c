@@ -1,0 +1,18 @@
+#include <stdio.h>
+/**
+ * main - I want to use putchar
+ * description: writing alphabets but e and q
+ * Return: 0
+ */
+int main(void)
+{
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		if (c != 'e' && c != 'q')
+		putchar(c);
+	}
+	putchar('\n');
+	return (0);
+}
