@@ -1,27 +1,18 @@
 #include <stdio.h>
-
 /**
- * main - this program shows lowercase alphabets reversed
+ * main - this program shows base 16 numbers
  *
- * Return:0
+ * Return: 0
  */
-
 int main(void)
 {
-	int n = '0';
+	int c;
 
-	while (n < '9')
-	{
-		putchar(n);
-		n++;
-	}
-	char c = 'a';
-
-	while (c <= 'f')
-	{
+	for (c = 0; c <= 9; c++)
+		putchar(c + '0');
+	for (c = 'a'; c <= 'f'; c++)
 		putchar(c);
-		c++;
-	}
 	putchar('\n');
 	return (0);
 }
+
