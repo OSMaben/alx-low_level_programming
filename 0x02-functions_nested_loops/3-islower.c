@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - this program that return either 1 or 0
+ * _islower - this program return either 1 or 0
  *
  *  @c: character in ascii code
  *
