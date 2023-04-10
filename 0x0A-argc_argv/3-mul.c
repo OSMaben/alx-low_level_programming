@@ -16,7 +16,7 @@ int main(__attribute__((unused))int argc, char **argv)
 
 	if (argv[1] == NULL || argv[2] == NULL)
 	{
-		printf("Erorr\n");
+		printf("Error\n");
 		return (1);
 	}
 	for (i = 0 ; i < j ; i++)
