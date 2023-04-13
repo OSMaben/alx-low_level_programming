@@ -28,7 +28,7 @@ length++;
 length++;
 }
 
-result = malloc(sizeof(char) * length);
+result = malloc(sizeof(char) * length + 1);
 for (i = 0; i < ac; i++)
 {
 for (s = 0; av[i][s]; s++)
