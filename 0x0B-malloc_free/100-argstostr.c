@@ -19,7 +19,6 @@ int indx = 0, i, s;
 
 if (ac == 0 || av == NULL)
 return (NULL);
-
 for (i = 0; i < ac; i++)
 {
 for (s = 0; av[i][s]; s++)
@@ -29,10 +28,7 @@ length++;
 length++;
 }
 
-result = malloc(sizeof(char) * (length + 1));
-if (result == NULL)
-return (NULL);
-
+result = malloc(sizeof(char) * length);
 for (i = 0; i < ac; i++)
 {
 for (s = 0; av[i][s]; s++)
@@ -40,10 +36,9 @@ for (s = 0; av[i][s]; s++)
 result[indx] = av[i][s];
 indx++;
 }
-result[indx] = ' ';
+result[indx] = '\n';
 indx++;
 }
-
 result[indx] = '\0';
 return (result);
 }
