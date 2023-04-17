@@ -10,8 +10,11 @@
  */
 void int_dog(struct dog *d, char *name, float age, char *owner)
 {
-	strcpy(d->name, name);
-	d->age = age;
-	trcpy(d->owner, onwer);
+	if(d != NULL)
+	{
+		strcpy(d->name, name);
+		d->age = age;
+		strcpy(d->owner, owner);
+	}
 }
 
