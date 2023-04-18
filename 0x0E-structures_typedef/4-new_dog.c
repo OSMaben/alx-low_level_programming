@@ -2,14 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * new_dog: pointer to the new struct
- * @name:of the dog
- * @age:of the dog
- * @owner:of the dog
- *
- * Return: null if the function fails
- * Description: this function create a new
- * dog by pointing to the previous dog
+ * new_dog -  Create a new dog variable that pionting to
+ * the previous one
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Owner of the dog
+ * Return:Pointer to new dog variable
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
