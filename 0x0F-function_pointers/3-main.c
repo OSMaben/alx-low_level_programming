@@ -4,7 +4,7 @@
  * @argc: number of arguments
  * @argv: command line arguments
  *
- * Return value of the main function
+ * Return: value of the main function
  */
 
 

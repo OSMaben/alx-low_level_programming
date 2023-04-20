@@ -5,7 +5,7 @@
  *
  * @a: first argument
  * @b: second argument
- * * Return the sum a + b
+ * * Return: the sum a + b
  */
 
 int op_add(int a, int b)
@@ -18,7 +18,7 @@ int op_add(int a, int b)
  *
  * @a: first argument
  * @b: second argument
- * Return the difference a - b
+ * Return: the difference a - b
  */
 
 int op_sub(int a, int b)
@@ -32,7 +32,7 @@ int op_sub(int a, int b)
  * @a: first argument
  * @b: second argument
  *
- * Return the difference a * b
+ * Return: the difference a * b
  */
 
 int op_mul(int a, int b)
@@ -46,7 +46,7 @@ int op_mul(int a, int b)
  * @a: first argument
  * @b: second argument
  *
- * Return the result of the multiplication
+ * Return: the result of the multiplication
  */
 
 int op_div(int a, int b)
@@ -60,7 +60,7 @@ int op_div(int a, int b)
  * @a: first argument
  * @b: second argument
  *
- * Return the result after modulo
+ * Return: the result after modulo
  */
 
 int op_mod(int a, int b)

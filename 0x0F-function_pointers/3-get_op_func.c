@@ -5,7 +5,7 @@
  * @s: the character
  *
  * @s: pointer to a functino that do the operation
- * Return: the operation function 
+ * Return: the operation function
  */
 
 int (*get_op_func(char *s))(int, int)
