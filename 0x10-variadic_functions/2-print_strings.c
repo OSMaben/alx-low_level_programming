@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-
 /**
  * print_strings - function that prints trings followed by a new line
  * @separator: the serating character
