@@ -4,6 +4,22 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+
+/**
+ * stryct token - struct tken 
+ *
+ * @spes: forma token 
+ * @f:the function assocciated
+ *
+ * */
+
+typedef struct spes
+{
+	char *spes;
+	void (*f)(char*, va_list);
+}spes_t;
+
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
