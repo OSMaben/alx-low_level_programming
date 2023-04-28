@@ -3,7 +3,7 @@
 /**
  * add_node - a function that adds a node to the biginning of a list_t
  * @head: a doouble pointer to the head of the list
- * str: a string describing the node
+ * @str: a string describing the node
  *
  * Return: the address of the new node element
 */
