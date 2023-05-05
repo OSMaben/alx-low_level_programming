@@ -7,29 +7,20 @@
  * Return: Nothing
 */
 
-
 void print_binary(unsigned long int n)
 {
-unsigned long int binary = 1;
-int i = 0;
+	int bites = sizeof(n) * 8, i = 0;
 
-while (binary <= n)
-{
-binary <<= 1;
-i++;
+	while (bites)
+	{
+		if (n & 1L << --bites)
+		{
+			_putchar('1');
+			i++;
+		}
+		else if (i)
+			_putchar('0');
+	}
+	if (!i)
+		_putchar('0');
 }
-if (i != 0)
-binary >>= 1;
-
-while (binary != 0)
-{
-if (n & binary)
-_putchar('1');
-else
-_putchar('0');
-
-binary >>= 1;
-}
-
-}
-
