@@ -10,18 +10,18 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
 	unsigned int rst = 0;
 
 	if (b == NULL)
 		return (0);
 
-	for (i = 0; b[i]; i++)
+	while (*b != 0)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (*b != '0' && *b != '1')
 			return (0);
-		rst = (rst << 1) + (b[i] - '0');
+		rst = rst * 2 + (*b++ - 48);
 	}
+
 	return (rst);
 
 }
