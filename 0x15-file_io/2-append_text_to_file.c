@@ -9,30 +9,21 @@
  * Return:1 on success, -1 on failure
 */
 
+
 int append_text_to_file(const char *filename, char *text_content)
 {
-
 	int opn;
+	ssize_t lenght;
 
-
-	ssize_t num = 0, len = strlen(text_content);
-
-
-	if (!filename)
-
+	if (filename == NULL)
 		return (-1);
-
 	opn = open(filename, O_WRONLY | O_APPEND);
-
 	if (opn == -1)
-
 		return (-1);
-
-	if (len)
-
-		num = write(opn, text_content, len);
-
+	if (text_content != NULL)
+		lenght = write(opn, text_content, strlen(text_content));
 	close(opn);
-
-	return (num == len ? 1 : -1);
+	if (lenght == -1)
+		return (-1);
+	return (1);
 }
