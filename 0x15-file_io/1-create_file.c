@@ -9,6 +9,7 @@
  * Return:1 on success, -1 on failure
 */
 
+
 int create_file(const char *filename, char *text_content)
 {
 	int opn;
@@ -21,12 +22,26 @@ int create_file(const char *filename, char *text_content)
 
 	if (opn == -1)
 		return (-1);
-	if (length)
-		num = write(opn, text_content, length);
-	close(opn);
 
-	if (num == length)
-		return (1);
+	if (length > 0)
+	{
+		num = write(opn, text_content, length);
+		if (num != length)
+		{
+			close(opn);
+			return (-1);
+		}
+	}
 	else
-		return (-1);
+	{
+		num = write(opn, "", 0);
+		if (num != 0)
+		{
+			close(opn);
+			return (-1);
+		}
+
+	}
+	close(opn);
+	return (1);
 }
