@@ -11,28 +11,22 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int opn, wrt, length = 0;
+	int opn;
+	ssize_t num = 0, length = strlen(text_content);
 
 	if (!filename)
 		return (-1);
 
-	if (text_content)
-	{
-		while (length == 0)
-		{
-			length++;
+	opn = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 
-		}
-
-	}
-
-	opn = open(filename, O_CREAT | O_RDWR | O_TRUNC, S_IRUSR | S_IWUSR);
-	wrt = write(opn, text_content, length);
-
-	if (opn == -1 || wrt == -1)
+	if (opn == -1)
 		return (-1);
-
+	if (length)
+		num = write(opn, text_content, length);
 	close(opn);
 
-	return (1);
-}
+	if (num == length)
+		return (1);
+	else
+		return (-1);
+
